@@ -20,7 +20,7 @@ const ProjectCard = (props) => {
         src={props.imgPath}
         alt="card-img"
         style={{
-          height: "200px",
+          height: "300px",
           objectFit: "contain",
           alignSelf: "flex-start",
           borderRadius: "10%",
@@ -53,17 +53,15 @@ const ProjectCard = (props) => {
           }}
         >
           <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
         </Button>
         {"\n"}
         {"\n"}
 
         {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
 
-        {!props.isBlog && props.demoLink && (
           <Button
             variant="primary"
-            href={props.demoLink}
+            href={props.liveLink}
             target="_blank"
             style={{
               marginTop: "10px",
@@ -79,7 +77,6 @@ const ProjectCard = (props) => {
             <CgWebsite /> &nbsp;
             {"Demo"}
           </Button>
-        )}
       </Card.Body>
     </Card>
   );
